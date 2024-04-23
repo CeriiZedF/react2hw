@@ -40,7 +40,7 @@ function App() {
     <>
       <User user={user}/>
       <br/>
-      <City city={city}/>\
+      <City city={city}/>
       <Book book={book}></Book>
       <BookC book={book}></BookC>
     </>

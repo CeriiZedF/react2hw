@@ -8,7 +8,7 @@ class City extends PureComponent {
         this.state = props.city;
     }
 
-    printNumbers0To5 = () => {
+    printNumbers = () => {
         const elements = [];
         for (var i = 0; i < this.state.arrSrc.length; i++) {
             elements.push(<img src={this.state.arrSrc[i]} alt="Not Found" />);
@@ -25,7 +25,7 @@ class City extends PureComponent {
                 <h2>Country: {this.state.cityCountry}</h2>
                 <h2>Date create: {this.state.yearCreate}</h2> 
                 <div className='container'>
-                    {this.printNumbers0To5()} 
+                    {this.printNumbers()} 
                 </div> 
             </>
         )
