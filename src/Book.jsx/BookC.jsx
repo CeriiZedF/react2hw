@@ -1,15 +1,24 @@
 import React, { PureComponent } from 'react'
 
 class BookC extends PureComponent {
-    constructor(props) {
-        super(props)
-
-        this.state = props.book;
+    book = {
+        name: 'Harry Potter and Philosofy Stone',
+        fullNameAuthor: 'J. K. Rowling',
+        style: 'Magic',
+        countPages: 500,
+        arrRecense: [
+            'Like good book',
+            '123123123123',
+            'fd;f;jlkwer'
+        ]
     }
+   
+
+    
     printNumbers = () => {
         const elements = [];
-        for (var i = 0; i < this.state.arrRecense.length; i++) {
-            elements.push(<p>{ this.state.arrRecense[i]}</p>);
+        for (var i = 0; i < this.book.arrRecense.length; i++) {
+            elements.push(<p>{ this.book.arrRecense[i]}</p>);
         }
         return elements;
       };
@@ -18,16 +27,17 @@ class BookC extends PureComponent {
             <>
                 <div className="container">
                 <h1>My favorite book (Class Component)</h1>
-                <p>Name: {this.state.name}</p>
-                <p>Full Name Author: {this.state.fullNameAuthor}</p>
-                <p>Style: {this.state.style}</p>
-                <p>Count Page: {this.state.countPages.toString()}</p>
+                <p>Name: {this.book.name}</p>
+                <p>Full Name Author: {this.book.fullNameAuthor}</p>
+                <p>Style: {this.book.style}</p>
+                <p>Count Page: {this.book.countPages.toString()}</p>
                 <h2>Recense</h2>
                 <div className='container'>
                     {this.printNumbers()} 
                 </div> 
             </div>
             </>
+
         )
     }
 }

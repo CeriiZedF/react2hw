@@ -1,7 +1,17 @@
 import React from 'react'
 
-function Book(props) {
-    const book = props.book;
+function Book() {
+    let book = {
+        name: 'Harry Potter and Philosofy Stone',
+        fullNameAuthor: 'J. K. Rowling',
+        style: 'Magic',
+        countPages: 500,
+        arrRecense: [
+            'Like good book',
+            '123123123123',
+            'fd;f;jlkwer'
+        ]
+    }
 
     function printNumbers()  {
         const elements = [];
@@ -20,9 +30,7 @@ function Book(props) {
                 <p>Style: {book.style}</p>
                 <p>Count Page: {book.countPages.toString()}</p>
                 <h2>Recense</h2>
-                <div className='container'>
-                    {printNumbers()} 
-                </div> 
+                {printNumbers()}
             </div>
         </>
     )
